@@ -1,0 +1,1333 @@
+<!DOCTYPE html>
+<html lang="zh-cn"><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="origin-when-crossorigin">
+    <meta name="description" content="友情提示：如果你参照教程安装出现了问题，极有可能是因为不同电脑之间的差异导致，可能有些问题我也没有遇到过，所以如果出现特殊问题，请移步评论区，说不定就有热心的小伙伴碰到过并完美解决。如果你遇到了实在难">
+    <meta property="og:description" content="友情提示：如果你参照教程安装出现了问题，极有可能是因为不同电脑之间的差异导致，可能有些问题我也没有遇到过，所以如果出现特殊问题，请移步评论区，说不定就有热心的小伙伴碰到过并完美解决。如果你遇到了实在难">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>windows10安装ubuntu双系统教程（绝对史上最详细） - 不妨不妨，来日方长 - 博客园</title>
+    <link id="favicon" rel="shortcut icon" href="https://common.cnblogs.com/favicon.svg" type="image/svg+xml">
+    
+    <link rel="stylesheet" href="windows10%E5%AE%89%E8%A3%85ubuntu_files/blog-common.css">
+    <link id="MainCss" rel="stylesheet" href="windows10%E5%AE%89%E8%A3%85ubuntu_files/bundle-codinglife.css">
+    <link type="text/css" rel="stylesheet" href="windows10%E5%AE%89%E8%A3%85ubuntu_files/cnblogs.css">
+    
+    <link id="mobile-style" media="only screen and (max-width: 767px)" type="text/css" rel="stylesheet" href="windows10%E5%AE%89%E8%A3%85ubuntu_files/bundle-codinglife-mobile.css">
+    
+    <link type="application/rss+xml" rel="alternate" href="https://www.cnblogs.com/masbay/rss">
+    <link type="application/rsd+xml" rel="EditURI" href="https://www.cnblogs.com/masbay/rsd.xml">
+    <link type="application/wlwmanifest+xml" rel="wlwmanifest" href="https://www.cnblogs.com/masbay/wlwmanifest.xml">
+    <script src="windows10%E5%AE%89%E8%A3%85ubuntu_files/osd.js"></script><script async="" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/analytics.js"></script><script>
+        var currentBlogId = 500056;
+        var currentBlogApp = 'masbay';
+        var cb_enable_mathjax = false;
+        var isLogined = false;
+        var isBlogOwner = false;
+        var skinName = 'CodingLife';
+        var visitorUserId = '';
+        var hasCustomScript = false;
+        try {
+            if (hasCustomScript && document.referrer && document.referrer.indexOf('baidu.com') >= 0) {
+                Object.defineProperty(document, 'referrer', { value: '' });
+            }
+        } catch { }
+    </script>
+        <script>
+            var currentPostDateAdded = '2019-04-25 12:33';
+        </script>
+    <script src="windows10%E5%AE%89%E8%A3%85ubuntu_files/jquery-2.js"></script>
+    <script src="windows10%E5%AE%89%E8%A3%85ubuntu_files/blog-common.js"></script><style type="text/css">.medium-zoom-overlay{position:fixed;top:0;right:0;bottom:0;left:0;opacity:0;transition:opacity .3s;will-change:opacity}.medium-zoom--opened .medium-zoom-overlay{cursor:pointer;cursor:zoom-out;opacity:1}.medium-zoom-image{cursor:pointer;cursor:zoom-in;transition:transform .3s cubic-bezier(.2,0,.2,1)!important}.medium-zoom-image--hidden{visibility:hidden}.medium-zoom-image--opened{position:relative;cursor:pointer;cursor:zoom-out;will-change:transform}</style>
+    
+    
+    
+<meta http-equiv="origin-trial" content="A88otRz1Fd3Nt567e2IYshC18LL3KGVXpVJW9oTCId4RYaygt23pbb4JqrbdIO/bwZPWEmRjBIRBu/bZbDR7Pg4AAABueyJvcmlnaW4iOiJodHRwczovL2ltYXNkay5nb29nbGVhcGlzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzVGhpcmRQYXJ0eSI6dHJ1ZX0="><meta http-equiv="origin-trial" content="A0gCLbXCcL0R1Oc8tFPDs0G4Elz17w3zHp+Zst66+D17veE2o7fUcPsA114QtSTRqfVJLMeTSdeWOom0CcyCsgYAAAB7eyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A9RQ+LxFazAousxUwSCzaihJjHLO1UyjQp0teZKHl7WdbVjPDfHSKMd6D/ZI5MTjqClFycbl70EFd7cBJWXqKQEAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A6WKeWsdn1Ct+ZPqS9NCxxaiBoQ7wdTkK2/gE69Yu0gfBKJfo1gOvgkGmf5/xaIajT/RUb9AbnF1FsSZ47cCcQcAAACBeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiVHJ1c3RUb2tlbnMiLCJleHBpcnkiOjE2MzQwODMxOTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A04ZCu7yjrHgwQJK5ISHhH1DSg0qqowEay3n70KO6wV3D2Mj+OX3Kw20aSMitzgdG1xfrN7sOJV/dZIk+RvCzA4AAAB2eyJvcmlnaW4iOiJodHRwczovL2dvb2dsZS5jb206NDQzIiwiZmVhdHVyZSI6IlRydXN0VG9rZW5zIiwiZXhwaXJ5IjoxNjM0MDgzMTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlfQ=="><meta http-equiv="origin-trial" content="A2YAd4xOntTGygIDjApOTtXOgVI3IWsd5OnOGq3RbRkIQwyqYWNl1JGRAcvtm6VOHDj4n07T/J19VqLuJn3MmQ8AAACWeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="A2c5Ux+hivdkLh/KbZUGr6f7SCR0mZrBVfPJ+/OuDVHNwiYv+Lo83b9z5qL8sod78bQl0pSLtbvRWURo+xRl7AIAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AzNJ4sd3tVurolpdvWYZ4cmP9Po7RJhEHSqmC3pgxW9fFVZvchhtcMUgHAs97npxMD1jhXHO8s6q6Wy1MMLxKgEAAACceyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiQ29udmVyc2lvbk1lYXN1cmVtZW50IiwiZXhwaXJ5IjoxNjMxNjYzOTk5LCJpc1N1YmRvbWFpbiI6dHJ1ZSwiaXNUaGlyZFBhcnR5Ijp0cnVlLCJ1c2FnZSI6InN1YnNldCJ9"><meta http-equiv="origin-trial" content="AwfG8hAcHnPa/kJ1Co0EvG/K0F9l1s2JZGiDLt2mhC3QI5Fh4qmsmSwrWObZFbRC9ieDaSLU6lHRxhGUF/i9sgoAAACBeyJvcmlnaW4iOiJodHRwczovL2RvdWJsZWNsaWNrLm5ldDo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AwQ7dCmHkvR6FuOFxAuNnktYSQrGbL4dF+eBkrwNLALc69Wr//PnO1yzns3pjUoCaYbKHtVcnng2hU+8OUm0PAYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXN5bmRpY2F0aW9uLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="AysVDPGQTLD/Scn78x4mLwB1tMfje5jwUpAAzGRpWsr1NzoN7MTFhT3ClmImi2svDZA7V6nWGIV8YTPsSRTe0wYAAACHeyJvcmlnaW4iOiJodHRwczovL2dvb2dsZXRhZ3NlcnZpY2VzLmNvbTo0NDMiLCJmZWF0dXJlIjoiSW50ZXJlc3RDb2hvcnRBUEkiLCJleHBpcnkiOjE2MjYyMjA3OTksImlzU3ViZG9tYWluIjp0cnVlLCJpc1RoaXJkUGFydHkiOnRydWV9"><script src="windows10%E5%AE%89%E8%A3%85ubuntu_files/pubads_impl_2021080901.js" async=""></script><link rel="preload" href="windows10%E5%AE%89%E8%A3%85ubuntu_files/integrator.js" as="script"><script type="text/javascript" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/integrator.js"></script></head>
+<body class="skin-codinglife has-navbar has-bannerbar">
+    <a name="top"></a>
+        <a target="_blank" href="https://cloud.baidu.com/campaign/2021autdiscount/index.html?track=cp:bokeyuan|pf:pc|pp:bokeyuan-huodong-21puhuishangyun-neiyePCtonglanbanner|pu:21puhuishangyun-neiyePCtonglanbanner|ci:21phsy|kw:10305378" onclick="ga('send', 'event', 'Link', 'click', 'baidu-cpa-blog-bannerbar-pc')">
+            <div class="bannerbar aliyun forpc" style="background-size: contain; background-image: url(https://img2020.cnblogs.com/blog/35695/202107/35695-20210728131358298-1687432223.jpg)">
+            </div>
+        </a>
+    <div id="top_nav" class="navbar forpc">
+        <nav id="nav_main" class="navbar-main">
+            <ul id="nav_left" class="navbar-list navbar-left">
+                <li class="navbar-branding"><a href="https://www.cnblogs.com/" title="开发者的网上家园"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/logo.svg" alt="博客园Logo"></a></li>
+                <li><a href="https://www.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-sitehome')">首页</a></li>
+                <li><a href="https://news.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-news')">新闻</a></li>
+                <li><a href="https://q.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-q')">博问</a></li>
+                <li><a id="nav_brandzone" href="https://brands.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-brands')">专区</a></li>
+                <li><a href="https://ing.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-ing')">闪存</a></li>
+                <li><a href="https://edu.cnblogs.com/" onclick="ga('send', 'event', 'Link', 'click', 'skin-navbar-edu')">班级</a></li>
+            </ul>
+            <ul id="nav_right" class="navbar-list navbar-right">
+                <li>
+                    <form id="zzk_search" class="navbar-search" action="https://zzk.cnblogs.com/s" method="get">
+                        <input name="w" id="zzk_search_input" placeholder="代码改变世界" type="text" tabindex="3">
+                        <button type="submit" id="zzk_search_button">
+                            <img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/search.svg" alt="搜索">
+                        </button>
+                    </form>
+                </li>
+                <li id="navbar_login_status" class="navbar-list">
+                    <a class="navbar-user-info navbar-blog" href="https://i.cnblogs.com/EditPosts.aspx?opt=1" alt="写随笔" title="写随笔" style="display: none;">
+                        <img id="new_post_icon" class="navbar-icon" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/newpost.svg" alt="写随笔">
+                    </a>
+                    <a id="navblog-myblog-icon" class="navbar-user-info navbar-blog" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx" alt="我的博客" title="我的博客" style="display: none;">
+                        <img id="myblog_icon" class="navbar-icon" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/myblog.svg" alt="我的博客">
+                    </a>
+                    <a class="navbar-user-info navbar-message navbar-icon-wrapper" href="https://msg.cnblogs.com/" alt="短消息" title="短消息" style="display: none;">
+                        <img id="msg_icon" class="navbar-icon" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/message.svg" alt="短消息">
+                        <span id="msg_count" style="display: none"></span>
+                    </a>
+                    <div id="user_info" class="navbar-user-info dropdown" style="display: none;">
+                        <a class="dropdown-button" href="https://home.cnblogs.com/">
+                            <img id="user_icon" class="navbar-avatar" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/avatar-default.svg" alt="用户头像">
+                        </a>
+                        <div class="dropdown-menu">
+                            <a id="navblog-myblog-text" href="https://passport.cnblogs.com/GetBlogApplyStatus.aspx">我的博客</a>
+                            <a href="https://home.cnblogs.com/">我的园子</a>
+                            <a href="https://account.cnblogs.com/settings/account">账号设置</a>
+                            <a href="javascript:void(0)" id="navbar_lite_mode_toggle" title="简洁模式会使用简洁款皮肤显示所有博客">
+    简洁模式 <img id="navbar_lite_mode_on" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/lite-mode-check.svg" class="hide"><span id="navbar_lite_mode_spinner" class="hide">...</span>
+</a>
+                            <a href="javascript:void(0)" onclick="account.logout();">退出登录</a>
+                        </div>
+                    </div>
+                    <a class="navbar-anonymous" href="https://account.cnblogs.com/signup/" style="display: inline;">注册</a>
+                    <a class="navbar-anonymous" href="javascript:void(0);" onclick="account.login()" style="display: inline;">登录</a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+
+    
+    <!--done-->
+<div id="home">
+<div id="header">
+	<div id="blogTitle">
+        <a id="lnkBlogLogo" href="https://www.cnblogs.com/masbay/"><img id="blogLogo" src="windows10%E5%AE%89%E8%A3%85ubuntu_files/logo.gif" alt="返回主页"></a>		
+		
+<!--done-->
+<h1><a id="Header1_HeaderTitle" class="headermaintitle HeaderMainTitle" href="https://www.cnblogs.com/masbay/">不妨不妨，来日方长</a>
+</h1>
+<h2></h2>
+
+
+
+
+		
+	</div><!--end: blogTitle 博客的标题和副标题 -->
+	<div id="navigator">
+		
+<ul id="navList">
+<li><a id="blog_nav_sitehome" class="menu" href="https://www.cnblogs.com/">
+博客园</a>
+</li>
+<li>
+<a id="blog_nav_myhome" class="menu" href="https://www.cnblogs.com/masbay/">
+首页</a>
+</li>
+<li>
+
+<a id="blog_nav_newpost" class="menu" href="https://i.cnblogs.com/EditPosts.aspx?opt=1">
+新随笔</a>
+</li>
+<li>
+<a id="blog_nav_contact" class="menu" href="https://msg.cnblogs.com/send/%E4%B8%8D%E5%A6%A8%E4%B8%8D%E5%A6%A8%EF%BC%8C%E6%9D%A5%E6%97%A5%E6%96%B9%E9%95%BF">
+联系</a></li>
+<li>
+<a id="blog_nav_rss" class="menu" href="javascript:void(0)" data-rss="https://www.cnblogs.com/masbay/rss/">
+订阅</a>
+<!--<partial name="./Shared/_XmlLink.cshtml" model="Model" /></li>--></li>
+<li>
+<a id="blog_nav_admin" class="menu" href="https://i.cnblogs.com/">
+管理</a>
+</li>
+</ul>
+
+
+		<div class="blogStats">
+			<span id="stats_post_count">随笔 - 117&nbsp; </span>
+<span id="stats_article_count">文章 - 0&nbsp; </span>
+<span id="stats-comment_count">评论 - 92&nbsp; </span>
+<span id="stats-total-view-count">阅读 - 
+<span title="总阅读数: 1117798">
+111万</span></span>
+
+		</div><!--end: blogStats -->
+	</div><!--end: navigator 博客导航栏 -->
+</div><!--end: header 头部 -->
+<div id="main">
+	<div id="mainContent">
+	<div class="forFlow">
+		<div id="post_detail">
+    <!--done-->
+    <div id="topics">
+        <div class="post">
+            <h1 class="postTitle">
+                
+<a id="cb_post_title_url" class="postTitle2 vertical-middle" href="https://www.cnblogs.com/masbay/p/10745170.html">
+    <span>windows10安装ubuntu双系统教程（绝对史上最详细）</span>
+    
+
+
+
+</a>
+
+            </h1>
+            <div class="clear"></div>
+            <div class="postBody">
+                <div id="cnblogs_post_body" class="blogpost-body blogpost-body-html">
+<p style="text-align: left" align="center"><span style="font-family: 宋体"><strong><span style="font-size: 16px"><strong><strong>友情提示</strong>：</strong></span></strong><span style="font-size: 16px">如
+果你参照教程安装出现了问题，极有可能是因为不同电脑之间的差异导致，可能有些问题我也没有遇到过，所以如果出现特殊问题，请移步评论区，说不定就有热心
+的小伙伴碰到过并完美解决。如果你遇到了实在难以解决的问题，可以向我求助，同时广泛在网络寻找解决办法，如果解决，希望你可以将解决方法放到评论区，帮
+助遇到同样问题的朋友们尽快解决问题，感谢你的支持与分享。</span></span></p>
+<p style="text-align: left" align="center"><span style="font-family: 宋体"><strong><span style="font-size: 16px">快车道：</span></strong></span></p>
+<p style="text-align: left" align="center"><span style="font-family: 宋体"><strong><span style="font-size: 16px"><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/masbay/p/10844857.html">Windows10安装ubuntu16.04双系统教程</a></span></strong></span></p>
+<p style="text-align: left" align="center"><span style="font-family: 宋体"><strong><span style="font-size: 16px"><a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/masbay/p/11627727.html">Windows10安装ubuntu18.04双系统教程</a></span></strong></span></p>
+<p style="text-align: left" align="center"><span style="font-family: 宋体"><strong><span style="font-size: 16px">一、&nbsp;先搞清楚自己电脑的类型：</span></strong></span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="A"></a>A&nbsp; MBR传统bios+单硬盘</span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="B"></a>B&nbsp; MBR传统bios+双硬盘（SSD固态硬盘+机械硬盘）</span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="C"></a>C&nbsp; UEFI新式bios+单硬盘</span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="D"></a>D&nbsp; UEFI新式bios+双硬盘（SSD固态硬盘+机械硬盘）</span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="E"></a>E&nbsp; 以上任意一种情况+电脑有特殊独立显卡（这种情况一般不考虑，只有少数电脑会遇到在Linux系统下没有显卡的驱动导致Linux装的过程中或装好后或装好后重启过程中卡死，一般就直接装双系统，如果遇到卡死参照我的另一篇博客：<a href="https://www.cnblogs.com/masbay/p/10718514.html" target="_blank">ubuntu双系统启动时卡死解决办法</a>）</span></p>
+<p style="text-align: left"><span style="font-family: 宋体; font-size: 14px">&nbsp;<a name="F"></a>F&nbsp; 删除ubuntu</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">这里就不去说MBR和UEFI的区别了，自己百度可以得到一大堆相关的东西。</span></p>
+<p><span style="color: rgba(255, 0, 0, 1); font-family: 宋体; font-size: 14px">就大部分情况来看，目前的电脑都是UEFI的，而所装的双系统大都是ubuntu16.04和ubuntu18.04或者ubuntu16.10和ubuntu18.10版本的，如果是这样，可以不用在这儿浪费时间，我单独写了教程，查看<a id="cb_post_title_url" class="postTitle2" href="https://www.cnblogs.com/masbay/p/10844857.html"><span style="color: rgba(255, 0, 0, 1)">Windows10安装ubuntu16.04双系统教程</span></a>即可，这个教程虽然是专门针对16.04写的，但其实18.04、16.10、18.10的安装情况跟16.04完全一样，完全可以按照这个教程来装。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">怎么看自己电脑是MBR还是UEFI：win+r输入msinfo32回车确认，出现以下信息</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421143622758-126034661.png" alt=""></span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421143629052-1246576454.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">传统是MBR，UEFI就是UEFI。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">自己电脑是单双硬盘自己应该清楚，卖电脑的会告诉你，这也算是卖点之一，如果有人连这个也不知道。。。那那那你还是继续往下看吧。。。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">此电脑图标右键-管理-磁盘管理</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421143748942-1953266022.png" alt=""></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421143756269-2097418442.png" alt=""></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">针对之前说过的ABCDE五种情况每一种的安装方法都有一定的区别，一定要按自己电脑对应的情况对号入座，不然会失败甚至产生无法挽回的问题，大家装系统前尽量备份自己的重要数据，不然万一没了，哭是没有用的，不过只要细心大胆一般是没事的。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">我自己安装的时候也遇到了很多的麻烦，都是百度，贴吧等解决，其实这些遇到关键问题时都不太靠谱，目前网上的教程大多是针对一种情况做的，但新手都不知道，导致用错教程，很多东西还是得自己尝试，大不了就翻车重装系统，所以再次提醒大家还是事先做好备份工作，以防万一。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">现在市场上的电脑大多都是UEFI的，MBR是很早以前的，多半是该换代了，所以说劝MBR的人可以直接换电脑了，但少数新电脑也是MBR，这就是生产商的脑残了，比如神舟的一些电脑就是。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><span style="color: rgba(255, 0, 0, 1)">再次说明，清楚你电脑是什么情况后，以下对号入座就行</span>。</span></p>
+<p>&nbsp;</p>
+<p><strong><span style="font-family: 宋体; font-size: 14px"><a name="A"></a>情况A MBR传统bios+单硬盘</span></strong></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">准备：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">安装ubuntu首先需要准备以下工具以及安装包：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. ubuntu 系统安装镜像</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 刻录软件，推荐软碟通，会提示注册，选择继续试用就好</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 一个大于 2G 的 U 盘</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4. EasyBCD 软件，此软件是同来作为系统引导所用</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">注意，只有MBR用EasyBCD，UEFI不
+需要，网上有UEFI系统用其他UEFI专用软件（类似MBR用的EasyBCD软件）按照类似于MBR的安装教程装双系统的，但我觉得没必要用而且多半
+没有什么用。（所以说我下面的方法是MBR用win作引导，UEFI用ubuntu作引导，有人说用ubuntu引导到时候删除ubuntu会很麻烦，其
+实直接到win10磁盘管理里删除ubuntu的卷就行，一点也麻烦，就是UEFI创建的EFI系统分区没办法删除，那就用DiskGenius软件删
+除，网上应该有这软件）。</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤一：在 WIN10系统下创建空白磁盘分区</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. 回到桌面，鼠标右键点击此电脑，选择管理，结果如下:</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144111758-1110543431.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 进入然后选择磁盘管理，结果如下：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144134312-1794279501.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 选择最后一个磁盘空间的磁盘，比如 CD两个盘的最后一个盘是D盘（CDE盘的最后一个E盘，CDEF盘的最后一个盘F盘，以此类推），右键点击该磁盘，选择压缩卷，结果如下：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144219591-1287747333.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4. 
+然后就是分区的大小了，（如果大小不够就腾一腾空间，保证最后一个盘有40~50G的空余空间吧，或者如果你空间足够，强烈建议60、80、100或
+120等大一点更好），换算成M之后输入，点击压缩，然后等待，最终结果如下：压缩后会发现多出一块未分区磁盘（黑色分区），如果选择的压缩大小是
+50G， 则黑色的的应该是50G可用空间。图是百度的，有些不准，如果你遇到最后一个盘刚好很小40G都分不出来的尴尬情况，可以使用</span><span style="font-family: 宋体; font-size: 14px">DiskGenius软件从其他盘分一点过来，具体不在这里阐述</span><span style="font-family: 宋体; font-size: 14px">。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144249759-1422722932.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">好了，磁盘分区到此结束，现在进行第二步；</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤二：用软碟通将 UBUNTU 的镜像写入 U 盘</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. </span><span style="font-family: 宋体; font-size: 14px">安装并打开软碟通，插上 U 盘，并且最好备份你的 U 盘，因为之后需要格式化</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 进入软碟通，进行如下操作 选择文件，并且打开你下载的 ubuntu 所在的目录，选择 unbuntu 镜像（改成选择自己的Ubuntu镜像即可），双击打开，如图：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144433959-1118818166.png" alt=""></span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144449817-1634930914.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 在软碟通界面菜单栏选择启动，选择写入硬盘映像，如图所示:</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144509795-498681718.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">接下来很重要，记住次序：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">进入以后界面如下：</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144531569-1034367299.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">1） 看你的硬盘驱动器是否对应的是你的 U 盘（必须是） ，一般默认是</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2） 看映像文件是否对应你的 ubuntu 镜像</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3） 如果上述均没有错误，选择格式化，之后就会格式化你的 U 盘</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4） 在 U 盘格式化完毕之后，选择写入，之后就是慢慢等待了，等待写入完毕</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">5） 步骤二完毕；</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤三：U 盘安装系统</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">写在前面，因为每个厂商的计算机 BOOT 
+启动的快捷键不相同，所以个人觉得要是你无法进入接下来的 BOOT 
+界面，还是自行百度如何进入BOOT界面，也就是进bios，如果这你都不知道，你还是放弃多学学在装，以免翻车；第 6 
+步非常关键，如果你不想重装系统，一定要小心。</span><br><span style="font-family: 宋体; font-size: 14px">1. 重启电脑，在开机进bios，在boot&nbsp;manager里关secure&nbsp;boot，（有些secure boot在另外的位置，自己找找）然后第一启动选择 USB，回车确认</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144731662-2031340629.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 之后就进入 unbuntu 的安装界面了</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144806524-1938367533.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 或许没有这个界面，但是下面的界面是一定有的，系统不同界面会有些差异，但都一样</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144833030-1335992346.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">4. 然后呢选择右边的，往下拉会有中文选择，如图:</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144855259-2097457221.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">5.安装 unbuntu</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">叫你联网的话不连，装系统不要联网，否则边装边下载很慢。</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144926901-730199861.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">6. 选择继续（注意，接下来这一步非常重要，一定小心）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">得到如下所视界面，如图:</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421144948814-1142280253.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">这一步很关键，一定要选择其他选项，切记，我们手动进行分区，然后进入如下界面</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145008459-1880468436.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">看到没有，里面会有一个空闲分区，也就是我们之前所创建的那个分区</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">在这里，我们谈谈关于 Linux 的分区：</span><br><span style="font-family: 宋体; font-size: 14px">a.首先 Linux 分区和 WINDOWS 分区是不一样的， Linux 是以文件形式作为分区</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">b.所以分区就像划分磁盘大小一样， 在这里假设你划分的空盘分区为 60G，则我们可以将其分为 :</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">点空闲盘符，点击+进行分区，分区如下：</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">1）/boot：这个就是实现你双系统的原因了，这个就是用于启动 ubuntu 的目录，里面会有系统的引导，这个文件其实只有几十兆，但是我们建议将其划分为 200M 文件格式为 ext4，这个分区必不可少，否则后果你懂得！ </span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2）swap:这个是 Linux 也就是 ubuntu 的交换区目录，这个一般的大小为内存的 2 倍左右， 主要是用来在电脑内存不足的情况下，系统会调用这片区域，来运行程序，我们可以将其分为 4G， 这个把ext4换成交换空间，英文swap</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3) /:这是 linux 也就是 ubuntu 的根目录就一个反斜杠表示，相当于windows的C盘， 我们将其分为 10G，文件格式为 ext4，条件允许可以大一点，可以20G，毕竟ubuntu装软件默认是装在这里的，大一点可能会省去后面隐藏的麻烦。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4）/home:这是 ubuntu 的“其他盘”， 这个也可以说是我们的个人目录，相当于windows的其他盘，所以为了让我们自己的目录大一点，剩下的全分给它，文件格式为 ext4</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">好了，这部分分区讲述完毕，你完全可以就按这个进行分区。当然，你可以划分的更详细，具体划分可以百度，但我觉得没有多大必要。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">下来的这一步很重要，切记（关系到 
+ubuntu 的开机启动） 依然在这个界面上，选择安装启动下拉菜单，我们刚刚不是创建了/boot 
+的文件吗，现在你看看这个区前面的编号是多少，我的是/dev/sda1,不同的机子在这个上面会有不同的编号，也就是选root对应的编号</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">然后在安装启动的下拉菜单中找到对应编号（例如sda1，可能是sda5，6等，具体看自己电脑/boot对应的），选择它，切记一定是/boot 的编号，如下图</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145145187-535268242.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">接下来就选择开始安装了；</span><br><span style="font-family: 宋体; font-size: 14px">8. 选择继续，进入下一步操作，设置地区不重要，按你需要设置，也可以直接继续，不影响，在下一步操作中选择键盘布局</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145500074-1399511149.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">9. 键盘布局“默认”，建议选择下面的英语的（默认中文也行）</span></p>
+<p>&nbsp;<img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145512632-1577919222.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">10. 这里设置系统用户，自己设置输入就可以了，姓名英文字母，例如ma</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">密码123456</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145538270-1499750835.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">11. 这个可选可不选，点“继续”（或许不会出现这步，忽略）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145623946-806190566.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">12． 系统开始安装，可以等会，等安装完毕就可以了（这里应该是欢迎使用Ubuntu Kylin 15.04，图片不准，以自己系统为准）</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145641078-517235563.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">当这些全部完成之后，机子会重启。你会发现直接进入你的 win系统，因为我们把它的引导搞到/boot 分区了。我们要用 EasyBCD 来给它创建启动时候的选择系统是 windows 还是 ubuntu 。</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤四：用 EasyBCD 引导 ubuntu</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">接下来就很简单了，在 windows下安装 EasyBCD,之后呢打开如图并且选择添加新条目：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145728963-458918667.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">得到如图，选择有企鹅那个，也就是 LINUX/BSD 那个选项，在磁盘驱动器那个下拉菜单选 择以 linux 开头，大小为 200M 左右的那个选项，如图</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190421145742813-6161.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">选择完了之后，添加条目，重启电脑，你就会发现你的 UBUNTU 和 WINDOWS 的双系统就安装完成了，它会让你选择系统。到此，ubuntu 安装结束！</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">当你不要 ubuntu 的时候，直接在 window 里磁盘管理删了它所在的分区，然后在 Easybcd 里 删了它的引导就行，不影响你的 windows 系统。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><a name="B"></a>情况</strong><strong>B MBR传统bios+双硬盘（SSD固态硬盘+机械硬盘）</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">这种情况我装过自己的电脑（神舟Z7M），死活
+装不上，各种方法大概试了几十遍，没错就是装了了几十遍系统，把百度都翻烂了也没解决，但不知道其他的电脑能不能装上，可以试一试，方法参看情况A，区别
+就是用最后一个硬盘的最后一个盘分出40~50G，其他都是一样的。（可我的当时就是没装上，不知道是MBR传统bios+双硬盘装不上还是我的特殊独显
+导致装不上，后面的人如果遇到可以试试，如果可以请写入教程，试不出来也没关系）</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><span style="color: rgba(255, 0, 0, 1)">MBR传统bios小结：</span></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">MBR这种已经很老了，可能装系统时会装不上，
+不是MBR传统bios装不上，而是可能会遇到各种问题导致装不上，可以试一试，如果实在装不上，就像是我自己的电脑（神舟Z7M），当时我想的是既然
+MBR传统bios如此low,不如高级一点的的UEFI，那我的电脑明明配置挺好的，为何不用UEFI呢，所以解决方法就是给电脑先重装系统，装成
+UEFI的系统，然后用下面UEFI的方法装双系统。所以，出现这种情况，个人建议直接重做windows系统。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><a name="C"></a>情况</strong><strong>C UEFI新式bios+单硬盘</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">准备：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">安装ubuntu 首先需要准备以下工具以及安装包：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. ubuntu 系统安装镜像</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 刻录软件，推荐软碟通，会提示注册，选择继续试用就好</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 一个大于 2G 的 U 盘</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">注意，<span style="color: rgba(255, 102, 0, 1)">只有MBR用EasyBCD</span>，UEFI不需要，网上有UEFI系统用其他UEFI专用软件（类似MBR用的EasyBCD软件）按照类似于MBR的安装教程装双系统的，但我觉得<span style="color: rgba(255, 102, 0, 1)">没必要用而且多半没有什么用</span>。
+（所以说我下面的方法是MBR用win作引导，UEFI用ubuntu作引导，有人说用ubuntu引导到时候删除ubuntu会很麻烦，其实直接到
+win10磁盘管理里删除ubuntu的卷就行，一点也麻烦，就是UEFI创建的EFI系统分区没办法删除，那就用DiskGenius软件删除，网上应
+该有这软件。如果这段说明看的云里雾里，完全没有关系，相信我，跟着下面的教程做就是了。）</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤一：在 WIN10系统下创建空白磁盘分区</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. 回到桌面，鼠标右键点击此电脑，选择管理，结果如下:</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424225809898-873995827.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 进入然后选择磁盘管理，结果如下：</span></p>
+<p>&nbsp;<img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424225823287-968856503.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 选择最后一个磁盘空间的磁盘，比如 CD两个盘的最后一个盘是D盘（CDE盘的最后一个E盘，CDEF盘的最后一个盘F盘，以此类推），右键点击该磁盘，选择压缩卷，如下：</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424230129335-711390914.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px" data-mce-="">如果大小不够就腾一腾空间，保证能分出40~50G的空余空间吧，如果你磁盘空间足够，<span style="color: rgba(255, 0, 0, 1)">强烈建议</span>多分一点，比如60、80、100G或者120G，百利无一害。如果你的最后一个盘空间并没有这么大，那么你需要从别的盘分一些空间过来，这个也是用到之前提到的DiskGenius软件，这里不详细说明如何操作。<span data-mce-="">最终结果如下：压缩后会发现多出一块 未分区磁盘（黑色分区），如果选择的压缩大小是 50G， 则黑色的的应该是 50G 可用空间。图是百度的，有些不准。</span></span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424230644261-2047691396.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">好了，磁盘分区到此结束，现在进行第二步；</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤二：用软碟通将ubuntu的镜像写入 U 盘</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">1. 安装并打开软碟通，插上 U 盘，并且最好备份你的 U 盘，因为之后需要格式化</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 进入软碟通，进行如下操作 选择文件，并且打开你下载的 ubuntu 所在的目录，选择 unbuntu 镜像（改成选择自己的ubuntu镜像即可），双击打开，如图：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232014434-802919591.png" alt=""></span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232024446-572935039.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 在软碟通界面菜单栏选择启动，选择写入硬盘映像，如图所示</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232051188-1668780453.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">接下来很重要，记住次序：</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">进入以后界面如下：</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232118990-128648958.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">1） 看你的硬盘驱动器是否对应的是你的 U 盘（必须是） ，一般默认是</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2） 看映像文件是否对应你的 ubuntu 镜像</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3） 如果上述均没有错误，选择格式化，之后就会格式化你的 U 盘</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4） 在 U 盘格式化完毕之后，选择写入，之后就是慢慢等待了，等待写入完毕</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">5） 步骤二完毕。</span></p>
+<p><strong><span style="font-family: 宋体; font-size: 14px">步骤三：U 盘安装系统</span></strong></p>
+<p><span style="font-family: 宋体; font-size: 14px">写在前面，因为个厂商的计算机 BOOT 
+启动的快捷键不相同，所以 个人觉得要是你无法进入接下来的 BOOT 界面，还是自行百度如何 进入 BOOT 
+界面，也就是进bios，如果这你都不知道，你还是放弃多学学再装，以免翻车。 第 6 步非常关键，如果你不想重装系统，一定要小心。</span><br><span style="font-family: 宋体; font-size: 14px">1. 重启系统，在开机进bios，在boot&nbsp;manager里关secure&nbsp;boot，（有些secure boot在另外的位置，自己找找）然后第一启动选择 USB，回车确认</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232249646-1336898840.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2. 之后就进入 unbuntu 的安装界面了</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232309006-1291987255.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3. 或许没有这个界面，但是下面的界面是一定有的，系统不同界面会有些差异，但都一样</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232402999-345448579.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4. 然后呢选择右边的，往下拉会有中文选择，如图</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232453395-806051217.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">5. 安装 unbuntu</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">叫你联网的话不连，装系统不要联网，否则边装边下载很慢。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232515245-1835768390.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">6. 选择继续（注意，接下来这一步非常重要，一定小心）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">得到如下所视界面，如图:</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232532939-1691083021.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">这一步很关键，<span style="color: rgba(255, 0, 0, 1)">一定要选择其他选项</span>，切记，因为我们要手动分区，然后进入如下界面。这里<span style="color: rgba(255, 0, 0, 1)">说明一点</span>，
+有人试过选择第一个选项，系统会自动找到你的空白分区进行安装，并且成功过，我不否认这样的装法，但是这样装完之后，磁盘基本上都会分给根目录，拿
+windows打比方，相当于你只有C盘，之后你的任何文件都只能存放在这个盘（不是说没有别的盘，而是别的盘空间太小。。。），试想你的文件存放在了系
+统盘，这会多么危险，所以既然你看到了这篇教程，<span style="color: rgba(255, 0, 0, 1)">强烈建议</span>按照我的步骤来进行<span style="color: rgba(255, 0, 0, 1)">手动分区</span>。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424232554987-1745621090.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">看到没有，里面会有一个空闲分区，也就是我们之前所创建的那个分区</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">在这里，我们谈谈关于 Linux的分区：</span><br><span style="font-family: 宋体; font-size: 14px">a.首先 Linux 分区和 windows分区是不一样的， Linux 是以文件形式作为分区</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">b.所以分区就像划分磁盘大小一样，在这假如你划分的空盘分区为 80G，则我们可以将其分为 :</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">点空闲盘符，点击+进行分区，分区如下</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">1） efi：这个就是实现你双系统的原因了，这个就是用启动 ubuntu 的目录，里面会有系统的引导，这个文件其实只有几十兆，但是我们建议将其划分为 200M 文件格式为efi，这个分区必不可少，否则后果你懂得！ </span></p>
+<p><span style="color: rgba(255, 102, 0, 1); font-family: 宋体; font-size: 14px">（这也就是MBR和UEFI的区别！！！！不用/boot，看不懂请忽略这句话）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">2） swap:这个是 Linux 也就是 ubuntu 的交换区目录，这个一般的大小为内存的 2 倍左右，主要是用来在电脑内存不足的情况下，系统会调用这片区域，来运行程序，我们可以将其分为 8G， 文件格式选择交换空间，英文swap</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">3) /:这是 linux 也就是 ubuntu 的根目录就一个反斜杠表示,相当于windows的C盘，我们将其分为 20G，文件格式为 ext4（<span style="color: rgba(255, 0, 0, 1)">根据你的磁盘空间调整，可以大一点，毕竟ubuntu装软件都是默认装在根目录的</span>）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">4） /home:这是 ubuntu的其他盘，相当于windows的其他盘，所以为了让我们自己的目录大一点，剩下的全分给它，文件格式为 ext4</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">好了，这部分分区讲述完毕，你完全可以按照上面的描述进行分区，不会有任何问题，起码我一直都是这么做的（强烈建议）。当然，你可以划分的更详细，具体划分可以百度。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">下来的这一步很重要，切记（关系到 
+ubuntu 
+的开机启动）在这个界面下方，选择安装启动下拉菜单，我们刚刚不是创建了200M的efi的文件吗，现在你看看这个区前面的编号是多少，我的是/dev
+/sda1,不同的机子在这个上面会有不同的编号，也就是选efi对应的编号（这里<span style="color: rgba(255, 0, 0, 1)">一定要注意</span>，windows的启动项也是efi文件，大小大概是500M，而<span style="color: rgba(255, 0, 0, 1)">我们创建的ubuntu的efi大小是200M</span>，一定要选对（下图中大小不准）！</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">然后在安装启动的下拉菜单中找到 对应编号（例如sda1，可能是sda2，3等，具体看自己电脑efi对应的），选择它，切记一定是efi的编号如下图:</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234116718-1712118367.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">接下来就选择开始安装了；</span><br><span style="font-family: 宋体; font-size: 14px">8. 选择继续，进入下一步操作，设置地区不重要，按你需要设置，也可以直接继续，不影响，在下一步操作中选择键盘布局</span></p>
+<p><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234151652-562151280.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">9. 键盘布局“默认”，建议选择下面的英语的（默认中文也行）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234208385-25856267.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">10. 这里设置系统用户，自己设置输入就可以了，例如姓名英文字母，尽量简单点吧</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">密码123456也简单点（好吧我可能是演员听多了。。。）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234333105-1507231686.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">11. 这个可选可不选，点“继续”(有些安装过程没有这一项，略过）</span></p>
+<p>&nbsp;<img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234343921-1185747411.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">12． 系统开始安装，可以等会，等安装完毕就可以了（系统版本可能不一样，图片不准）</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424234431695-1060403124.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">当这些全部完成之后，会提醒你重启，把U盘拔了，点重启。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">如果卡死就强制关机重启就好。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424235049768-982808054.png" alt=""></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">&nbsp;13. 
+也许你已经装好了系统并且成功进入了，那恭喜，你可以离开了；但是如果你装完之后重启，发现卡死在启动界面动不了了，这很大可能是你的电脑有特殊独立显
+卡，ubuntu系统下缺少驱动导致，其实这属于情况E，但是既然你在这里遇到了，我也就不卖关子了，你可以参考我的另一篇博客解决：<a href="https://www.cnblogs.com/masbay/p/10718514.html" target="_blank">安装好ubuntu双系统启动时卡死解决办法</a></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><a name="D"></a>情况D</strong><strong>&nbsp;&nbsp;UEFI新式bios+</strong><strong>双</strong><strong>硬盘</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">这个的装法和UEFI新式bios+单硬盘基本
+一样，唯一的差别就是一开始分区的时候在SSD（也就是windows的C盘）分200M的空间来安装启动项（因为启动项“必须”在电脑的第一个磁盘，这
+里的“必须”我打了引号，其实也可以装在其他磁盘，就是你装好进系统要从boot里面选择ubuntu启动，个人觉得比较麻烦，不推荐，更何况我的这种方
+法也没有什么难度和缺点），在机械硬盘分60~80G（可以更大，100、120或者150，只要你磁盘容量充足，也许会省去后面不少隐藏的麻烦），
+SSD分的200M的空间待会放EFI，其他的就放在另外的60~80G里面。其他的就完全一样了。图片分区可能不准。</span></p>
+<p>&nbsp;<img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424235108889-590314371.png" alt=""></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><a name="E"></a>E &nbsp;以上任意一种情况+电脑有特殊独立显</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">装好系统后先不要点重启</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">进设置-在软件和更新里的驱动列表选择合适的驱动安装</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">选一个合适的专有驱动安装，图片百度的，不准</span></p>
+<p>&nbsp;<img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/1628751-20190424235238716-2011129761.png" alt=""></p>
+<p><span style="font-family: 宋体; font-size: 14px">装好驱动后再重启。当然，这是针对你已经知道你电脑有特殊独立显卡，至于怎么判断，这个我也不是很清楚，其实你完全可以不用做这一步，出现的情况就是你在重启ubuntu进入系统是界面会卡死，这个问题我已经在我的另一篇博客中阐述了解决办法，如果你遇到了可以参考解决：<a href="https://www.cnblogs.com/masbay/p/10718514.html" target="_blank">ubuntu双系统启动时卡死解决办法</a></span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><a name="F"></a>F 删除</strong><strong>ubuntu</strong><strong>：</strong></span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">直接到win10磁盘管理里删除ubuntu的卷就行，一点也麻烦，就是UEFI创建的EFI系统分区没办法删除，那就用DiskGenius软件删除，网上应该有这软件。MBR再加上用EasyBCD删除引导，不删也行，删了干净些。</span></p>
+<p>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong>总结：</strong></span></p>
+<p><span style="font-family: 宋体; font-size: 14px">装的过程如果出现什么问题一番查找之后还是不知道怎么解决，回到windows删除之后重装就行，胆大心细，就没问题，至少我装过20遍以上没装崩过一次，希望你看到这里已经成功装好了双系统，也感谢你不计较篇幅看到最后。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">也欢迎纠错，帮我完善这篇教程，以帮助更多的人。</span></p>
+<p><span style="font-family: 宋体; font-size: 14px">Best wishes to you!</span>&nbsp;</p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px">写博不易，转载请注明出处。</span></p>
+<p>&nbsp;</p>
+<p><span style="font-family: 宋体; font-size: 14px"><strong><strong><strong>友情提示</strong>：</strong></strong>如
+果你参照教程安装出现了问题，极有可能是因为不同电脑之间的差异导致，可能有些问题我也没有遇到过，所以如果出现特殊问题，请移步评论区，说不定就有热心
+的小伙伴碰到过并完美解决。如果你遇到了实在难以解决的问题，可以向我求助，同时广泛在网络寻找解决办法，如果解决，希望你可以将解决方法放到评论区，帮
+助遇到同样问题的朋友们尽快解决问题，感谢你的支持与分享。</span></p>
+</div>
+<div class="clear"></div>
+<div id="blog_post_info_block"><div id="BlogPostCategory">
+    分类: 
+            <a href="https://www.cnblogs.com/masbay/category/1445288.html" target="_blank">windows10和ubuntu双系统相关</a></div>
+
+
+    <div id="blog_post_info">
+<div id="green_channel">
+        <a href="javascript:void(0);" id="green_channel_digg" onclick="DiggIt(10745170,cb_blogId,1);green_channel_success(this,'谢谢推荐！');">好文要顶</a>
+        <a id="green_channel_follow" onclick="follow('7697d9a5-d47b-49ac-ec2d-08d6a695d280');" href="javascript:void(0);">关注我</a>
+    <a id="green_channel_favorite" onclick="AddToWz(cb_entryId);return false;" href="javascript:void(0);">收藏该文</a>
+    <a id="green_channel_weibo" href="javascript:void(0);" title="分享至新浪微博" onclick="ShareToTsina()"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/icon_weibo_24.png" alt=""></a>
+    <a id="green_channel_wechat" href="javascript:void(0);" title="分享至微信" onclick="shareOnWechat()"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/wechat.png" alt=""></a>
+</div>
+<div id="author_profile">
+    <div id="author_profile_info" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/masbay/" target="_blank"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/20190421141405.png" class="author_avatar" alt=""></a>
+        <div id="author_profile_detail" class="author_profile_info">
+            <a href="https://home.cnblogs.com/u/masbay/">不妨不妨，来日方长</a><br>
+            <a href="https://home.cnblogs.com/u/masbay/followees/">关注 - 1</a><br>
+            <a href="https://home.cnblogs.com/u/masbay/followers/">粉丝 - 46</a>
+        </div>
+    </div>
+    <div class="clear"></div>
+    <div id="author_profile_honor"></div>
+    <div id="author_profile_follow">
+                <a href="javascript:void(0);" onclick="follow('7697d9a5-d47b-49ac-ec2d-08d6a695d280');return false;">+加关注</a>
+    </div>
+</div>
+<div id="div_digg">
+    <div class="diggit" onclick="votePost(10745170,'Digg')">
+        <span class="diggnum" id="digg_count">28</span>
+    </div>
+    <div class="buryit" onclick="votePost(10745170,'Bury')">
+        <span class="burynum" id="bury_count">0</span>
+    </div>
+    <div class="clear"></div>
+    <div class="diggword" id="digg_tips">
+    </div>
+</div>
+
+<script type="text/javascript">
+    currentDiggType = 0;
+</script></div>
+    <div class="clear"></div>
+    <div id="post_next_prev">
+
+    <a href="https://www.cnblogs.com/masbay/p/10744900.html" class="p_n_p_prefix">« </a> 上一篇：    <a href="https://www.cnblogs.com/masbay/p/10744900.html" title="发布于 2019-04-21 13:42">ubuntu18.04获取root权限并用root用户登录</a>
+    <br>
+    <a href="https://www.cnblogs.com/masbay/p/10844857.html" class="p_n_p_prefix">» </a> 下一篇：    <a href="https://www.cnblogs.com/masbay/p/10844857.html" title="发布于 2019-05-10 16:03">Windows10安装ubuntu16.04双系统教程</a>
+
+</div>
+</div>
+            </div>
+            <div class="postDesc">posted @ 
+<span id="post-date">2019-04-25 00:33</span>&nbsp;
+<a href="https://www.cnblogs.com/masbay/">不妨不妨，来日方长</a>&nbsp;
+阅读(<span id="post_view_count">620083</span>)&nbsp;
+评论(<span id="post_comment_count">33</span>)&nbsp;
+<a href="https://i.cnblogs.com/EditPosts.aspx?postid=10745170" rel="nofollow">编辑</a>&nbsp;
+<a href="javascript:void(0)" onclick="AddToWz(10745170);return false;">收藏</a>&nbsp;
+<a href="javascript:void(0)" onclick="reportManager.report({ currentUserId: '', targetType: 'blogPost', targetId: '10745170', targetLink: 'https://www.cnblogs.com/masbay/p/10745170.html', title: 'windows10安装ubuntu双系统教程（绝对史上最详细）' })">举报</a></div>
+        </div>
+	    
+	    
+    </div><!--end: topics 文章、评论容器-->
+</div>
+
+<script type="text/javascript">
+    window.codeHighlightEngine = 1
+    window.enableCodeLineNumber = false
+</script>
+<script src="windows10%E5%AE%89%E8%A3%85ubuntu_files/highlight.js" async="" onload="markdown_highlight()"></script>
+<script>
+    var allowComments = true, cb_blogId = 500056, cb_blogApp = 'masbay', cb_blogUserGuid = '7697d9a5-d47b-49ac-ec2d-08d6a695d280';
+    var cb_entryId = 10745170, cb_entryCreatedDate = '2019-04-25 00:33', cb_postType = 1;
+    updatePostStats(
+        [cb_entryId],
+        function(id, count) { $("#post_view_count").text(count) },
+        function(id, count) { $("#post_comment_count").text(count) })
+    zoomManager.apply("#cnblogs_post_body img:not(.code_img_closed):not(.code_img_opened)");
+</script>
+
+<a name="!comments"></a>
+<div id="blog-comments-placeholder"></div>
+<div id="comment_form" class="commentform">
+    <a name="commentform"></a>
+    <div id="divCommentShow"></div>
+    <div id="comment_nav"><span id="span_refresh_tips"></span><a href="javascript:void(0);" onclick="return RefreshCommentList();" id="lnk_RefreshComments" runat="server" clientidmode="Static">刷新评论</a><a href="#" onclick="return RefreshPage();">刷新页面</a><a href="#top">返回顶部</a></div>
+    <div id="comment_form_container" style="visibility: visible;"><div class="login_tips">
+    登录后才能查看或发表评论，立即 <a rel="nofollow" href="javascript:void(0);" class="underline" onclick="return account.login('!comments');">登录</a> 或者
+    <a href="https://www.cnblogs.com/">逛逛</a> 博客园首页
+</div>
+</div>
+    <div class="ad_text_commentbox" id="ad_text_under_commentbox"></div>
+    <div id="ad_t2"><a href="https://cloud.baidu.com/campaign/2021autdiscount/index.html?track=cp:bokeyuan|pf:pc|pp:bokeyuan-huodong-21puhuishangyun-neiyewenzilian|pu:21puhuishangyun-neiyewenzilian|ci:21phsy|kw:10305382" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-百度云-普惠上云节')">【推荐】百度智能云2021普惠上云节：新用户首购云服务器低至0.7折</a><br><a href="https://www.aliyun.com/minisite/goods?taskCode=yds2021-07zy&amp;recordId=807539&amp;userCode=swh7dvlt" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-阿里云-cps')">【推荐】阿里云云大使特惠：新用户购ECS服务器1核2G最低价87元/年</a><br><a href="http://www.uccpsoft.com/index.htm" target="_blank" onclick="ga('send', 'event', 'Link', 'click', 'T2-ucancode')">【推荐】大型组态、工控、仿真、CAD\GIS 50万行VC++源码免费下载!</a><br></div>
+    <div id="opt_under_post"></div>
+    <div id="cnblogs_c1" class="under-post-card">
+        <div id="div-gpt-ad-1592365906576-0" style="width: 300px; height: 250px;" data-google-query-id="CJjdxseVq_ICFVHqvAodcYMGAA"><div id="google_ads_iframe_/1090369/C1_0__container__" style="border: 0pt none;"><iframe id="google_ads_iframe_/1090369/C1_0" title="3rd party ad content" name="google_ads_iframe_/1090369/C1_0" scrolling="no" marginwidth="0" marginheight="0" style="border: 0px none; vertical-align: bottom;" srcdoc="" data-google-container-id="1" data-load-complete="true" width="300" height="250" frameborder="0"></iframe></div></div>
+    </div>
+    <div id="under_post_card1"><div class="under-post-card">
+<b>编辑推荐：</b>
+<br>
+
+· <a href="https://www.cnblogs.com/nullllun/p/15114841.html" target="_blank">记一次接口慢查排查</a>
+    <br>
+· <a href="https://www.cnblogs.com/xuanyuan/p/15122294.html" target="_blank">一个故事看懂HTTPS</a>
+    <br>
+· <a href="https://www.cnblogs.com/doNetTom/p/15117612.html" target="_blank">人人都能看懂系列：分布式系统改造方案之数据篇</a>
+    <br>
+· <a href="https://www.cnblogs.com/hickey2048/p/15108278.html" target="_blank">C++动态内存管理与源码剖析</a>
+    <br>
+· <a href="https://www.cnblogs.com/lesliexin/p/15106309.html" target="_blank">[.Net] 进程间通信框架（基于共享内存）——SimpleMMF</a>
+    <br>
+</div></div>
+    <div id="cnblogs_c2" class="under-post-card"><a href="https://exec-ed-online.haas-berkeley.ushi.cn/data-science/?utm_source=BKY&amp;utm_medium=CPS&amp;utm_campaign=C-BH-DS-21-10-10_BKY_CPS_PC_C2_1" target="_blank"><img src="windows10%E5%AE%89%E8%A3%85ubuntu_files/35695-20210712130008236-1358169146.jpg" alt="大数据与数据科学实战-468x60-1" onclick="ga('send', 'event', 'Link', 'click', 'C2-优士研习社');" width="468" height="60"></a></div>
+    <div id="under_post_card2"><div class="itnews under-post-card">
+    <b>最新新闻</b>：
+    <br>
+ ·          <a href="https://news.cnblogs.com/n/700095/" target="_blank">网红品牌战长沙：长沙是避风港，外地或许是险滩</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/700094/" target="_blank">专家评任天堂专利案 或史上最多赔偿额最强法务部名不虚传</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/700093/" target="_blank">暴雪在四年时间里失去了近一半的月活跃用户</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/700092/" target="_blank">JEDI后，AWS与微软Azure“再战”100亿美元云计算大单</a>
+        <br>
+ ·          <a href="https://news.cnblogs.com/n/700091/" target="_blank">Facebook着手研发同态加密技术，仅仅是精准投放广告吗？</a>
+        <br>
+    » <a href="https://news.cnblogs.com/" title="IT 新闻" target="_blank">更多新闻...</a>
+</div></div>
+    <div id="HistoryToday" class="under-post-card" style="display: none;"></div>
+    <script type="text/javascript">
+       var commentManager = new blogCommentManager();
+       commentManager.renderComments(0);
+       fixPostBody();
+       deliverBigBanner();
+setTimeout(function() { incrementViewCount(cb_entryId); }, 50);       deliverT2();
+       deliverC1C2();
+       loadNewsAndKb();
+LoadPostCategoriesTags(cb_blogId, cb_entryId);       LoadPostInfoBlock(cb_blogId, cb_entryId, cb_blogApp, cb_blogUserGuid);
+       GetPrevNextPost(cb_entryId, cb_blogId, cb_entryCreatedDate, cb_postType);
+       loadOptUnderPost();
+       GetHistoryToday(cb_blogId, cb_blogApp, cb_entryCreatedDate);
+    </script>
+</div>
+
+	</div><!--end: forFlow -->
+	</div><!--end: mainContent 主体内容容器-->
+	<div id="sideBar">
+		<div id="sideBarMain">
+			<div id="sidebar_news" class="newsItem"><!--done-->
+<h3 class="catListTitle">公告</h3>
+
+<div id="blog-news">
+    
+    <div id="profile_block">
+        昵称：
+        <a href="https://home.cnblogs.com/u/masbay/">
+            不妨不妨，来日方长
+        </a>
+        <br>
+        园龄：
+        <a href="https://home.cnblogs.com/u/masbay/" title="入园时间：2019-03-12">
+            2年5个月
+        </a>
+        <br>
+        粉丝：
+        <a href="https://home.cnblogs.com/u/masbay/followers/">
+            46
+        </a>
+        <br>
+        关注：
+        <a href="https://home.cnblogs.com/u/masbay/followees/">
+            1
+        </a>
+        <div id="p_b_follow">
+<a href="javascript:void(0)" onclick="follow('7697d9a5-d47b-49ac-ec2d-08d6a695d280')">+加关注</a></div>
+        <script>getFollowStatus('7697d9a5-d47b-49ac-ec2d-08d6a695d280');</script>
+    </div>
+</div>
+
+</div>
+<div id="sidebar_c3"></div>
+			<div id="blog-calendar" style="">
+
+<table id="blogCalendar" class="Cal" title="Calendar" cellspacing="0" cellpadding="0" border="0">
+    <tbody>
+        <tr>
+            <td colspan="7">
+                <table class="CalTitle" cellspacing="0" border="0">
+                    <tbody>
+                        <tr>
+                            <td class="CalNextPrev">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2021/07/12'); return false;">&lt;</a>
+                            </td>
+                            <td align="center">2021年8月</td>
+                            <td class="CalNextPrev" align="right">
+                                <a href="javascript:void(0);" onclick="loadBlogCalendar('2021/09/12'); return false;">&gt;</a>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </td>
+        </tr>
+    <tr>
+        <th class="CalDayHeader" abbr="日" scope="col" align="center">日</th>
+        <th class="CalDayHeader" abbr="一" scope="col" align="center">一</th>
+        <th class="CalDayHeader" abbr="二" scope="col" align="center">二</th>
+        <th class="CalDayHeader" abbr="三" scope="col" align="center">三</th>
+        <th class="CalDayHeader" abbr="四" scope="col" align="center">四</th>
+        <th class="CalDayHeader" abbr="五" scope="col" align="center">五</th>
+        <th class="CalDayHeader" abbr="六" scope="col" align="center">六</th>
+    </tr>
+            <tr>
+                        <td class="CalWeekendDay" align="center">
+                            1
+                        </td>
+                        <td class="" align="center">
+                            2
+                        </td>
+                        <td class="" align="center">
+                            3
+                        </td>
+                        <td class="" align="center">
+                            4
+                        </td>
+                        <td class="" align="center">
+                            5
+                        </td>
+                        <td class="" align="center">
+                            6
+                        </td>
+                    <td class="CalWeekendDay" align="center">
+                        7
+                    </td>
+            </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            8
+                        </td>
+                            <td class="" align="center">
+                                9
+                            </td>
+                            <td class="" align="center">
+                                10
+                            </td>
+                            <td class="" align="center">
+                                11
+                            </td>
+                            <td class="CalTodayDay" align="center">
+                                12
+                            </td>
+                            <td class="" align="center">
+                                13
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            14
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            15
+                        </td>
+                            <td class="" align="center">
+                                16
+                            </td>
+                            <td class="" align="center">
+                                17
+                            </td>
+                            <td class="" align="center">
+                                18
+                            </td>
+                            <td class="" align="center">
+                                19
+                            </td>
+                            <td class="" align="center">
+                                20
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            21
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            22
+                        </td>
+                            <td class="" align="center">
+                                23
+                            </td>
+                            <td class="" align="center">
+                                24
+                            </td>
+                            <td class="" align="center">
+                                25
+                            </td>
+                            <td class="" align="center">
+                                26
+                            </td>
+                            <td class="" align="center">
+                                27
+                            </td>
+                        <td class="CalWeekendDay" align="center">
+                            28
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalWeekendDay" align="center">
+                            29
+                        </td>
+                            <td class="" align="center">
+                                30
+                            </td>
+                            <td class="" align="center">
+                                31
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                1
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                2
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                3
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            4
+                        </td>
+                </tr>
+                <tr>
+                        <td class="CalOtherMonthDay" align="center">
+                            5
+                        </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                6
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                7
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                8
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                9
+                            </td>
+                            <td class="CalOtherMonthDay" align="center">
+                                10
+                            </td>
+                        <td class="CalOtherMonthDay" align="center">
+                            11
+                        </td>
+                </tr>
+    </tbody>
+</table></div><script>loadBlogDefaultCalendar();</script>			
+			<div id="leftcontentcontainer">
+				<div id="blog-sidecolumn"><!-- 搜索 -->
+<div id="sidebar_search" class="sidebar-block">
+    <div id="sidebar_search" class="mySearch">
+        <h3 class="catListTitle">搜索</h3>
+        <div id="sidebar_search_box">
+            <div id="widget_my_zzk" class="div_my_zzk">
+                <input type="text" id="q" onkeydown="return zzk_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="zzk_go()" type="button" value="找找看" id="btnZzk" class="btn_my_zzk">
+            </div>
+            <div id="widget_my_google" class="div_my_zzk">
+                <input type="text" name="google_q" id="google_q" onkeydown="return google_go_enter(event);" class="input_my_zzk">&nbsp;<input onclick="google_go()" type="button" value="谷歌搜索" class="btn_my_zzk">
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 常用链接 -->
+<div id="sidebar_shortcut" class="sidebar-block"><div class="catListLink">
+<h3 class="catListTitle">
+常用链接
+</h3>
+<ul>
+    
+<li><a href="https://www.cnblogs.com/masbay/p/" title="我的博客的随笔列表">我的随笔</a></li>
+<li><a href="https://www.cnblogs.com/masbay/MyComments.html" title="我的发表过的评论列表">我的评论</a></li>
+<li><a href="https://www.cnblogs.com/masbay/OtherPosts.html" title="我评论过的随笔列表">我的参与</a></li>
+<li><a href="https://www.cnblogs.com/masbay/RecentComments.html" title="我的博客的评论列表">最新评论</a></li>
+<li><a href="https://www.cnblogs.com/masbay/tag/" title="我的博客的标签列表">我的标签</a></li>
+
+</ul>
+</div>
+
+</div>
+
+<!-- 最新随笔 -->
+
+
+<!-- 我的标签 -->
+<div id="sidebar_toptags" class="sidebar-block"><div class="catListTag">
+<h3 class="catListTitle">我的标签</h3>
+<ul>
+        <li>
+            <a href="https://www.cnblogs.com/masbay/tag/root%E7%94%A8%E6%88%B7/">root用户<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/masbay/tag/root%E6%9D%83%E9%99%90/">root权限<span class="tag-count">(2)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/masbay/tag/ubuntu16.04/">ubuntu16.04<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/masbay/tag/ubuntu%E7%B3%BB%E7%BB%9F%E6%9B%B4%E6%94%B9%E6%96%87%E4%BB%B6%E6%9D%83%E9%99%90/">ubuntu系统更改文件权限<span class="tag-count">(1)</span></a>
+        </li>
+        <li>
+            <a href="https://www.cnblogs.com/masbay/tag/ubuntu18.04/">ubuntu18.04<span class="tag-count">(1)</span></a>
+        </li>
+    
+
+</ul>
+</div>
+
+</div>
+
+<!-- 积分与排名 -->
+
+
+<!-- 随笔分类、随笔档案、文章分类、新闻分类、相册、链接 -->
+<div id="sidebar_categories">
+
+    <div id="sidebar_postcategory" class="catListPostCategory sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔分类
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1923934.html" rel="" target="">
+    【数据结构与算法】BFS（广度优先搜索）(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1921975.html" rel="" target="">
+    【数据结构与算法】nSum(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914188.html" rel="" target="">
+    【数据结构与算法】动态规划(4)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1900271.html" rel="" target="">
+    【数据结构与算法】二叉树(9)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914163.html" rel="" target="">
+    【数据结构与算法】二分法(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1906096.html" rel="" target="">
+    【数据结构与算法】滑动窗口(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1903358.html" rel="" target="">
+    【数据结构与算法】回溯(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914165.html" rel="" target="">
+    【数据结构与算法】链表(4)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914189.html" rel="" target="">
+    【数据结构与算法】手撕代码(8)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914164.html" rel="" target="">
+    【数据结构与算法】数组(8)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914161.html" rel="" target="">
+    【数据结构与算法】双指针(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1913157.html" rel="" target="">
+    【数据结构与算法】贪心(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914187.html" rel="" target="">
+    【数据结构与算法】栈与队列(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1914185.html" rel="" target="">
+    【数据结构与算法】字符串(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1854404.html" rel="" target="">
+    C++(29)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1900295.html" rel="" target="">
+    Linux系统编程(5)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1931816.html" rel="" target="">
+    MySQL数据库(16)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1441275.html" rel="" target="">
+    python23事(3)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1445288.html" rel="" target="">
+    windows10和ubuntu双系统相关(8)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1903363.html" rel="" target="">
+    排序算法(6)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1887756.html" rel="" target="">
+    算法设计与分析MOOC（北航）(4)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="false" style="display: none">
+                    
+<a href="https://www.cnblogs.com/masbay/category/1885183.html" rel="" target="">
+    学习笔记(1)
+</a>
+ 
+
+                </li>                
+            <li>
+                <a href="javascript:void(0)" onclick="sideColumnManager.loadMore(this)">更多</a>
+            </li>
+        </ul>
+
+
+    </div>    
+    <div id="sidebar_postarchive" class="catListPostArchive sidebar-block">
+        <h3 class="catListTitle">
+            
+随笔档案
+
+
+
+        </h3>
+
+        <ul>
+
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2021/04.html" rel="" target="">
+    2021年4月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2021/02.html" rel="" target="">
+    2021年2月(27)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2021/01.html" rel="" target="">
+    2021年1月(21)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2020/12.html" rel="" target="">
+    2020年12月(26)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2020/11.html" rel="" target="">
+    2020年11月(17)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2020/09.html" rel="" target="">
+    2020年9月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2019/10.html" rel="" target="">
+    2019年10月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2019/09.html" rel="" target="">
+    2019年9月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2019/08.html" rel="" target="">
+    2019年8月(1)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2019/05.html" rel="" target="">
+    2019年5月(2)
+</a>
+ 
+
+                </li>                
+                <li data-category-list-item-visible="true" style="display: block">
+                    
+<a href="https://www.cnblogs.com/masbay/archive/2019/04.html" rel="" target="">
+    2019年4月(15)
+</a>
+ 
+
+                </li>                
+            
+        </ul>
+
+
+    </div>    
+</div>
+
+<!-- 最新评论 -->
+<div id="sidebar_recentcomments" class="sidebar-block"><div class="catListComment">
+<h3 class="catListTitle">最新评论</h3>
+
+	<div class="RecentCommentBlock">
+        <ul>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/masbay/p/11627727.html">1. Re:Windows10安装ubuntu18.04双系统教程</a></li>
+                    <li class="recent_comment_body">@躺平仰望星空 点不动改个U盘名字就好了...</li>
+                    <li class="recent_comment_author">--不妨不妨，来日方长</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/masbay/p/11627727.html">2. Re:Windows10安装ubuntu18.04双系统教程</a></li>
+                    <li class="recent_comment_body"><p>为什么我点格式化点不动，然后点写入显示磁盘/映象容量太小</p>
+</li>
+                    <li class="recent_comment_author">--躺平仰望星空</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/masbay/p/10745170.html">3. Re:windows10安装ubuntu双系统教程（绝对史上最详细）</a></li>
+                    <li class="recent_comment_body">博主好，我是情况D，但是在分区的时候我发现我虽然是CDE盘，但是我的E盘只有13g左右，D盘是800多g，按您的要求应当在E盘分出60-80g，但我这个情况显然无法在E盘分出这么多地方，请问该如何解决...</li>
+                    <li class="recent_comment_author">--LeFantasque</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/masbay/p/10745170.html">4. Re:windows10安装ubuntu双系统教程（绝对史上最详细）</a></li>
+                    <li class="recent_comment_body">“情况D UEFI新式bios+双硬盘” 这种装法的缺点就是，你的移动硬盘中的系统只能在你这个装有Ubuntu引导的电脑上用，而“双硬盘双系统”的好处就在于：系统是可移动的，插在任何电脑上都可以使用，...</li>
+                    <li class="recent_comment_author">--yyw九歌</li>
+                    <li class="recent_comment_title"><a href="https://www.cnblogs.com/masbay/p/11627727.html">5. Re:Windows10安装ubuntu18.04双系统教程</a></li>
+                    <li class="recent_comment_body">@不妨不妨，来日方长 那安装之前我分出来了，我从D盘（和C盘处于同一个硬盘中）分出来2G，为了安全就大一些，那么如何安装启动项呢？还是在另外一个硬盘中安装Ubuntu的时候，自动的就在这个2G的小空间...</li>
+                    <li class="recent_comment_author">--丰泽园的天空</li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+
+<!-- 阅读排行榜 -->
+<div id="sidebar_topviewedposts" class="sidebar-block"><div class="catListView">
+<h3 class="catListTitle">阅读排行榜</h3>
+	<div id="TopViewPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10745170.html">
+                            1. windows10安装ubuntu双系统教程（绝对史上最详细）(619949)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/11627727.html">
+                            2. Windows10安装ubuntu18.04双系统教程(169241)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10844857.html">
+                            3. Windows10安装ubuntu16.04双系统教程(160351)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10718514.html">
+                            4. ubuntu双系统启动时卡死解决办法(58124)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10744900.html">
+                            5. ubuntu18.04获取root权限并用root用户登录(21941)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 评论排行榜 -->
+<div id="sidebar_topcommentedposts" class="sidebar-block"><div class="catListFeedback">
+<h3 class="catListTitle">评论排行榜</h3>
+	<div id="TopFeedbackPostsBlock">
+        <ul style="word-break:break-all">
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10745170.html">
+                            1. windows10安装ubuntu双系统教程（绝对史上最详细）(33)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/11627727.html">
+                            2. Windows10安装ubuntu18.04双系统教程(25)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10844857.html">
+                            3. Windows10安装ubuntu16.04双系统教程(21)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10718514.html">
+                            4. ubuntu双系统启动时卡死解决办法(7)
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.cnblogs.com/masbay/p/10688541.html">
+                            5. python中的self(3)
+                        </a>
+                    </li>
+        </ul>
+    </div>
+</div>
+
+</div>
+
+<!-- 推荐排行榜 -->
+<div id="sidebar_topdiggedposts" class="sidebar-block">
+<div id="topdigg_posts_wrap">
+    <div class="catListView">
+        <h3 class="catListTitle">推荐排行榜</h3>
+        <div id="TopDiggPostsBlock">
+            <ul style="word-break: break-all">
+                        <li>
+                            <a href="https://www.cnblogs.com/masbay/p/10745170.html">
+                                1. windows10安装ubuntu双系统教程（绝对史上最详细）(28)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/masbay/p/11627727.html">
+                                2. Windows10安装ubuntu18.04双系统教程(13)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/masbay/p/10844857.html">
+                                3. Windows10安装ubuntu16.04双系统教程(6)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/masbay/p/10718514.html">
+                                4. ubuntu双系统启动时卡死解决办法(5)
+                            </a>
+                        </li>
+                        <li>
+                            <a href="https://www.cnblogs.com/masbay/p/10688541.html">
+                                5. python中的self(5)
+                            </a>
+                        </li>
+            </ul>
+        </div>
+    </div>
+</div></div></div>
+                    <script>loadBlogSideColumn();</script><iframe src="windows10%E5%AE%89%E8%A3%85ubuntu_files/container.html" style="visibility: hidden; display: none;"></iframe>
+			</div>			
+		</div><!--end: sideBarMain -->
+	</div><!--end: sideBar 侧边栏容器 -->
+	<div class="clear"></div>
+	</div><!--end: main -->
+	<div class="clear"></div>
+	<div id="footer">
+		<!--done-->
+Copyright © 2021 不妨不妨，来日方长
+<br><span id="poweredby">Powered by .NET 5.0 on Kubernetes</span>
+
+
+
+	</div><!--end: footer -->
+</div><!--end: home 自定义的最大容器 -->
+
+
+    
+
+    <input type="hidden" id="antiforgery_token" value="CfDJ8NACB8VE9qlHm6Ujjqxvg5Dba8emtMIwf4bMRA-ox8lDeZeYzHjkzcMxsMa1iZ3fv6y1-ks-xe0Nu1_rpF3047bPcZ7Kc5gX6n0nYDsq5UoQVYwbV-SZaciXAU2bVL6a-8d-a2YEKYb2m6GYiZaTQII">
+
+
+<iframe src="https://www.google.com/recaptcha/api2/aframe" style="display: none;" width="0" height="0"></iframe><iframe id="google_osd_static_frame_9352402639458" name="google_osd_static_frame" style="display: none; width: 0px; height: 0px;"></iframe></body></html>
